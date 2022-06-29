@@ -1,10 +1,9 @@
-import { useState } from "react";
-
-function Modal() {
-  const [showModal, setShowModal] = useState(false);
-
+function Modal({ handleShowModal }) {
   return (
-    <div className="fixed inset-0 z-40 flex items-center justify-center w-100 min-h-screen">
+    <div
+      className="fixed inset-0 z-40 flex items-center justify-center w-100 min-h-screen"
+      onClick={handleShowModal}
+    >
       <div className="fixed inset-0 bg-black opacity-50"></div>
       <div className="bg-white p-0 md:p-6 z-10">
         <div className="w-screen pb-56 md:pb-56 relative z-50">
